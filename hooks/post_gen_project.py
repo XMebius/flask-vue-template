@@ -11,7 +11,7 @@ MANIFEST = os.path.join(script_dir, 'manifest.yml')
 def delete_resources_for_disabled_features():
     print(os.getcwd())
     with open(MANIFEST) as manifest_file:
-        manifest = yaml.load(manifest_file)
+        manifest = yaml.load(manifest_file, Loader=yaml.SafeLoader)
         for feature in manifest['features']:
             if feature['enabled'] != 'y':
                 print('removing resources for disabled feature {}...'.format(feature['name']))
