@@ -3,9 +3,8 @@ import shutil
 
 import yaml
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-MANIFEST = os.path.join(script_dir, 'manifest.yml')
-# MANIFEST = './manifest.yml'
+
+MANIFEST = 'manifest.yml'
 
 
 def delete_resources_for_disabled_features():
