@@ -3,7 +3,7 @@ import shutil
 
 import yaml
 
-MANIFEST = 'manifest.yml'
+MANIFEST = './manifest.yml'
 
 
 def delete_resources_for_disabled_features():
